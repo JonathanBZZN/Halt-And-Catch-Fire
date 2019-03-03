@@ -1,0 +1,656 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "little adventure game",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help me",
+                        "help me alexa",
+                        "I am lost",
+                        "I need help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": [
+                        "where am I",
+                        "describe the room",
+                        "where am I",
+                        "look",
+                        "look around",
+                        "describe"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RestartGame",
+                    "slots": [],
+                    "samples": [
+                        "restart game",
+                        "new game"
+                    ]
+                },
+                {
+                    "name": "CompletelyExit",
+                    "slots": [
+                      {
+                          "name": "exits",
+                          "type": "LIST_OF_EXITS"
+                      }
+                    ],
+                    "samples": [
+                        "I want to {exits}",
+                        "I want to go back to {exits}",
+                        "{exits}"
+                    ]
+                },
+                {
+                    "name": "Go",
+                    "slots": [
+                        {
+                            "name": "direction",
+                            "type": "LIST_OF_DIRECTIONS"
+                        }
+                    ],
+                    "samples": [
+                        "go {direction}",
+                        "run {direction}",
+                        "walk {direction}",
+                        "exit {direction}",
+                        "enter {direction}",
+                        "explore {direction}",
+                        "enter the {direction}",
+                        "escape through {direction}",
+                        "climb out {direction}",
+                        "climb out the {direction}",
+                        "take {direction}",
+                        "{direction}",
+                        "check out the {direction}",
+                        "check out the {direction} with an axe",
+                        "eat the {direction}",
+                        "eat the {direction} with an axe",
+                        "try the {direction}",
+                        "try the {direction} with an axe",
+                        "check the {direction}",
+                        "check the {direction} again",
+                        "check the {direction} with the blue key",
+                        "check the {direction} with the egg",
+                        "use the {direction}",
+                        "use the {direction} again",
+                        "get rid of the {direction}",
+                        "get rid of the {direction} again",
+                        "check under the {direction}",
+                        "check under the {direction} again",
+                        "look at more {direction}",
+                        "get {direction}",
+                        "break the {direction} with the axe",
+                        "swing at {direction}",
+                        "step through the {direction}",
+                        "look around the {direction}",
+                        "look at {direction}",
+                        "take the {direction}",
+                        "try and {direction}",
+                        "bargain {direction}",
+                        "see {direction}",
+                        "try to {direction}",
+                        "look at {direction}",
+                        "go to the {direction}",
+                        "go back to {direction}",
+                        "agree {direction}",
+                        "agree that you are {direction}",
+                        "the {direction}",
+                        "{direction} in",
+                        "wear the {direction}",
+                        "approach {direction}",
+                        "approach {direction} again",
+                        "answer {direction}",
+                        "{direction} the table",
+                        "return to {direction}",
+                        "return back to {direction}",
+                        "prove {direction}",
+                        "prove {direction} again",
+                        "rummage {direction}",
+                        "rummage {direction} again",
+                        "join {direction}",
+                        "understand {direction}"
+                    ]
+                },
+                {
+                    "name": "Open",
+                    "slots": [],
+                    "samples": [
+                        "open",
+                        "open the door"
+                    ]
+                },
+                {
+                    "name": "Lock",
+                    "slots": [],
+                    "samples": [
+                        "lock",
+                        "lock the door"
+                    ]
+                },
+                {
+                    "name": "Jump",
+                    "slots": [],
+                    "samples": [
+                        "jump"
+                    ]
+                },
+                {
+                    "name": "Fight",
+                    "slots": [
+                        {
+                            "name": "npc",
+                            "type": "LIST_OF_NON_PLAYING_CHARACTERS"
+                        }
+                    ],
+                    "samples": [
+                        "hit the {npc}",
+                        "hit the",
+                        "hit",
+                        "fight",
+                        "fight {npc}",
+                        "fight the {npc}",
+                        "battle {npc}",
+                        "battle the {npc}",
+                        "battle with the {npc}",
+                        "attack {npc}",
+                        "attack the {npc}",
+                        "hit {npc}",
+                        "let it {npc}",
+                        "get rid of {npc}",
+                        "get rid of {npc} again",
+                        "murder {npc}",
+                        "kill {npc}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_DIRECTIONS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "north"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "south"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "east"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "west"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "up"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "down"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "in"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "out"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "left"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "right"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "turn around"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "carry on"
+                            }
+                        },
+                        {
+                            "id": "desk",
+                            "name": {
+                                "value": "desk",
+                                "synonyms": [
+                                    "table"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "window"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "door"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "stairs"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "elevator",
+                                "synonyms": [
+                                    "lift"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "corridor",
+                                "synonyms": [
+                                    "hall",
+                                    "hallway",
+                                    "the hallway"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "first floor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "basement"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the gnome"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the counter"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "call mathy back"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mathy wrong"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "game poster"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "movie poster"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bathroom"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cheese"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sink"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "shower"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "toilet"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "door"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bug"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "things"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "red door"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "green door"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "blue door"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "black door"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "white door"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hand"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bargain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "even more"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the aftermath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "continue"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "what happens"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "leave"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "leave the room"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the window"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the dishmaker"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "say sorry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "where to"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "face crab cakes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pomegranate pie"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "eldritch terror gumbo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "boiled brussel sprouts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sprouts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "big door"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ready"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "him"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "a flat circle"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "that"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "black suit with a lot of soot",
+                                "synonyms": [
+                                    "black lot of soot"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "black suit with a bit of soot",
+                                "synonyms": [
+                                    "black bit of soot"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "white suit with a really weird texture",
+                                "synonyms": [
+                                    "white suit weird"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "white suit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the podium"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the table"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tombstone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "newspaper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "book"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "milkmen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "yes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pick up"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pick up"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "kick"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "levitate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "question mark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rest of the room"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_NON_PLAYING_CHARACTERS",
+                    "values": [
+                      {
+                          "name": {
+                              "value": "clock"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "ring"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "man on the left"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "man on the right"
+                          }
+                      },
+                      {
+                            "name": {
+                                "value": "woman",
+                                "synonyms": [
+                                    "her"
+                                ]
+                            }
+                      }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_EXITS",
+                    "values": [
+                      {
+                          "name": {
+                              "value": "sleep"
+                          }
+                      },
+                        {
+                            "name": {
+                                "value": "exit"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
